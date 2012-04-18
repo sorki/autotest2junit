@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite failures="1" tests="67" errors="0" name="testsuite" time="13.000">
+  <testcase classname="cluster.btp_distances_cluster_objects" name="btp_distances_cluster_objects">
+    <failure message="Test failed" type="fail"/>
+  </testcase>
+  <testcase classname="utils.btp_strcmp0" name="btp_strcmp0" time="0.094"/>
+  <testcase classname="utils.btp_strchr_location" name="btp_strchr_location" time="0.110"/>
+  <testcase classname="utils.btp_strstr_location" name="btp_strstr_location" time="0.086"/>
+  <testcase classname="utils.btp_strspn_location" name="btp_strspn_location" time="0.077"/>
+  <testcase classname="utils.btp_skip_char" name="btp_skip_char" time="0.099"/>
+  <testcase classname="utils.btp_skip_char_limited" name="btp_skip_char_limited" time="0.099"/>
+  <testcase classname="utils.btp_parse_char_limited" name="btp_parse_char_limited" time="0.114"/>
+  <testcase classname="utils.btp_skip_char_sequence" name="btp_skip_char_sequence" time="0.097"/>
+  <testcase classname="utils.btp_skip_char_span" name="btp_skip_char_span" time="0.100"/>
+  <testcase classname="utils.btp_skip_char_span_location" name="btp_skip_char_span_location" time="0.090"/>
+  <testcase classname="utils.btp_parse_char_span" name="btp_parse_char_span" time="0.106"/>
+  <testcase classname="utils.btp_parse_char_cspan" name="btp_parse_char_cspan" time="0.108"/>
+  <testcase classname="utils.btp_skip_string" name="btp_skip_string" time="0.086"/>
+  <testcase classname="utils.btp_parse_string" name="btp_parse_string" time="0.108"/>
+  <testcase classname="utils.btp_skip_unsigned_integer" name="btp_skip_unsigned_integer" time="0.090"/>
+  <testcase classname="utils.btp_parse_unsigned_integer" name="btp_parse_unsigned_integer" time="0.105"/>
+  <testcase classname="utils.btp_skip_hexadecimal_number" name="btp_skip_hexadecimal_number" time="0.098"/>
+  <testcase classname="utils.btp_parse_hexadecimal_number" name="btp_parse_hexadecimal_number" time="0.111"/>
+  <testcase classname="strbuf.btp_strbuf_append_char" name="btp_strbuf_append_char" time="0.096"/>
+  <testcase classname="strbuf.btp_strbuf_append_str" name="btp_strbuf_append_str" time="0.091"/>
+  <testcase classname="frame.btp_frame_dup" name="btp_frame_dup" time="0.085"/>
+  <testcase classname="frame.btp_frame_parse_frame_start" name="btp_frame_parse_frame_start" time="0.101"/>
+  <testcase classname="frame.btp_frame_parseadd_operator" name="btp_frame_parseadd_operator" time="0.113"/>
+  <testcase classname="frame.btp_frame_parse_function_name" name="btp_frame_parse_function_name" time="0.089"/>
+  <testcase classname="frame.btp_frame_skip_function_args" name="btp_frame_skip_function_args" time="0.106"/>
+  <testcase classname="frame.btp_frame_parse_function_call" name="btp_frame_parse_function_call" time="0.101"/>
+  <testcase classname="frame.btp_frame_parse_address_in_function" name="btp_frame_parse_address_in_function" time="0.098"/>
+  <testcase classname="frame.btp_frame_parse_file_location" name="btp_frame_parse_file_location" time="0.107"/>
+  <testcase classname="frame.btp_frame_parse_header" name="btp_frame_parse_header" time="0.109"/>
+  <testcase classname="frame.btp_frame_parse" name="btp_frame_parse" time="0.111"/>
+  <testcase classname="thread.btp_thread_remove_frame" name="btp_thread_remove_frame" time="0.109"/>
+  <testcase classname="thread.btp_thread_remove_frames_above" name="btp_thread_remove_frames_above" time="0.092"/>
+  <testcase classname="thread.btp_thread_remove_frames_below_n" name="btp_thread_remove_frames_below_n" time="0.111"/>
+  <testcase classname="thread.btp_thread_parse" name="btp_thread_parse" time="0.106"/>
+  <testcase classname="thread.btp_thread_parse-locations" name="btp_thread_parse-locations" time="0.095"/>
+  <testcase classname="thread.btp_thread_skip_lwp" name="btp_thread_skip_lwp" time="0.096"/>
+  <testcase classname="backtrace.btp_backtrace_remove_threads_except_one" name="btp_backtrace_remove_threads_except_one" time="0.112"/>
+  <testcase classname="backtrace.btp_backtrace_find_crash_thread" name="btp_backtrace_find_crash_thread" time="0.110"/>
+  <testcase classname="backtrace.btp_backtrace_limit_frame_depth" name="btp_backtrace_limit_frame_depth" time="0.095"/>
+  <testcase classname="backtrace.btp_backtrace_quality_complex" name="btp_backtrace_quality_complex" time="0.080"/>
+  <testcase classname="normalize.btp_normalize_thread_removes_zeroes" name="btp_normalize_thread_removes_zeroes" time="0.114"/>
+  <testcase classname="normalize.btp_normalize_paired_unknown_function_names" name="btp_normalize_paired_unknown_function_names" time="0.113"/>
+  <testcase classname="metrics.metrics_all_one_thread_empty" name="metrics_all_one_thread_empty" time="0.091"/>
+  <testcase classname="metrics.metrics_all_both_threads_empty" name="metrics_all_both_threads_empty" time="0.076"/>
+  <testcase classname="metrics.metrics_all_both_starting_??_levendistance3_a" name="metrics_all_both_starting_??_levendistance3_a" time="0.086"/>
+  <testcase classname="metrics.metrics_all_both_starting_??_levendistance3_b" name="metrics_all_both_starting_??_levendistance3_b" time="0.105"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_levendistance0_a" name="metrics_levenshtein_random_??_levendistance0_a" time="0.112"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_levendistance0_b" name="metrics_levenshtein_random_??_levendistance0_b" time="0.121"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_distance1" name="metrics_levenshtein_random_??_distance1" time="0.082"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_distance2_a" name="metrics_levenshtein_random_??_distance2_a" time="0.116"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_distance2_b" name="metrics_levenshtein_random_??_distance2_b" time="0.107"/>
+  <testcase classname="metrics.metrics_levenshtein_random_??_distance2_c" name="metrics_levenshtein_random_??_distance2_c" time="0.109"/>
+  <testcase classname="metrics.metrics_levenshtein_trans_??_distance2_a" name="metrics_levenshtein_trans_??_distance2_a" time="0.121"/>
+  <testcase classname="metrics.metrics_levenshtein_trans_??_distance2_b" name="metrics_levenshtein_trans_??_distance2_b" time="0.113"/>
+  <testcase classname="metrics.metrics_levenshtein_swap_trans_distance2_a" name="metrics_levenshtein_swap_trans_distance2_a" time="0.088"/>
+  <testcase classname="metrics.metrics_levenshtein_swap_notrans_distance3_a" name="metrics_levenshtein_swap_notrans_distance3_a" time="0.109"/>
+  <testcase classname="metrics.metrics_jaccard_random_??_distance0_a" name="metrics_jaccard_random_??_distance0_a" time="0.103"/>
+  <testcase classname="metrics.metrics_jaccard_random_??_distance23_a" name="metrics_jaccard_random_??_distance23_a" time="0.105"/>
+  <testcase classname="metrics.metrics_jaccard_random_??_distance35" name="metrics_jaccard_random_??_distance35" time="0.120"/>
+  <testcase classname="metrics.distances_basic_properties" name="distances_basic_properties" time="0.090"/>
+  <testcase classname="metrics.distances_threads_compare" name="distances_threads_compare" time="0.088"/>
+  <testcase classname="cluster.btp_dendrogram_cut" name="btp_dendrogram_cut" time="0.096"/>
+  <testcase classname="sharedlib.btp_sharedlib_parse" name="btp_sharedlib_parse" time="0.090"/>
+  <testcase classname="sharedlib.btp_sharedlib_count" name="btp_sharedlib_count" time="0.084"/>
+  <testcase classname="sharedlib.btp_sharedlib_append" name="btp_sharedlib_append" time="0.110"/>
+  <testcase classname="sharedlib.btp_sharedlib_find_address" name="btp_sharedlib_find_address" time="0.096"/>
+  <system-out><![CDATA[## ------------------------- ##
+ ## btparser 0.18 test suite. ##
+ ## ------------------------- ##
+ 
+ testsuite: command line was:
+   $ ./testsuite 
+ 
+ ## ----------- ##
+ ## ChangeLogs. ##
+ ## ----------- ##
+ 
+ testsuite: ../ChangeLog:
+ | 2011-05-16  Karel Kl  <kklic@redhat.com>
+ | 
+ | 	* configure.ac: Increase version to 0.14.
+ | 
+ | 	* btparser.spec.in (Summary, %description): Minor tweaks.
+ | 
+ | 	* Released as 0.13.
+ | 
+ | 	* NEWS: Mention recent spec file changes.
+ | 
+ 
+ ## --------- ##
+ ## Platform. ##
+ ## --------- ##
+ 
+ hostname = dhcp-25-177.brq.redhat.com
+ uname -m = x86_64
+ uname -r = 2.6.32-251.el6.x86_64
+ uname -s = Linux
+ uname -v = #1 SMP Fri Mar 9 12:48:43 EST 2012
+ 
+ /usr/bin/uname -p = unknown
+ /bin/uname -X     = unknown
+ 
+ /bin/arch              = x86_64
+ /usr/bin/arch -k       = unknown
+ /usr/convex/getsysinfo = unknown
+ /usr/bin/hostinfo      = unknown
+ /bin/machine           = unknown
+ /usr/bin/oslevel       = unknown
+ /bin/universe          = unknown
+ 
+ PATH: /home/rmarko/btparser/tests
+ PATH: /usr/lib64/ccache
+ PATH: /usr/lib64/qt-3.3/bin
+ PATH: /usr/local/bin
+ PATH: /usr/bin
+ PATH: /bin
+ PATH: /usr/games
+ PATH: /usr/local/sbin
+ PATH: /usr/sbin
+ PATH: /sbin
+ 
+ testsuite: atconfig:
+ | # Configurable variable values for building test suites.
+ | # Generated by ./config.status.
+ | # Copyright (C) 2000, 2001, 2003, 2004 Free Software Foundation, Inc.
+ | 
+ | # The test suite will define top_srcdir=/../.. etc.
+ | at_testdir='tests'
+ | abs_builddir='/home/rmarko/btparser/tests'
+ | at_srcdir='.'
+ | abs_srcdir='/home/rmarko/btparser/tests'
+ | at_top_srcdir='..'
+ | abs_top_srcdir='/home/rmarko/btparser'
+ | at_top_build_prefix='../'
+ | abs_top_builddir='/home/rmarko/btparser'
+ | 
+ | # Backward compatibility with Autotest <= 2.59b:
+ | at_top_builddir=$at_top_build_prefix
+ | 
+ | AUTOTEST_PATH='tests'
+ | 
+ | SHELL=${CONFIG_SHELL-'/bin/sh'}
+ 
+ testsuite: atlocal:
+ | # tests/atlocal.  Generated from atlocal.in by configure.                                     -*- shell-script -*-
+ | # Configurable variable values for btparser test suite.
+ | 
+ | # We need a C compiler.
+ | CC='gcc'
+ | LIBTOOL="$abs_top_builddir/libtool"
+ | 
+ | # We want no optimization.
+ | CFLAGS="-g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -I$abs_top_builddir -D_GNU_SOURCE"
+ | 
+ | # Are special link options needed?
+ | LDFLAGS=" $abs_top_builddir/lib/libbtparser.la"
+ | 
+ | # Are special libraries needed?
+ | LIBS=""
+ 
+ ## ---------------- ##
+ ## Tested programs. ##
+ ## ---------------- ##
+ 
+ ## ------------------ ##
+ ## Running the tests. ##
+ ## ------------------ ##
+ testsuite: starting at: Tue Apr 17 15:47:39 CEST 2012
+ 1. btp_strcmp0 (utils.at:9): ok     (0m0.094s 0m0.044s)
+ 2. btp_strchr_location (utils.at:29): ok     (0m0.110s 0m0.050s)
+ 3. btp_strstr_location (utils.at:65): ok     (0m0.086s 0m0.043s)
+ 4. btp_strspn_location (utils.at:105): ok     (0m0.077s 0m0.036s)
+ 5. btp_skip_char (utils.at:138): ok     (0m0.099s 0m0.048s)
+ 6. btp_skip_char_limited (utils.at:155): ok     (0m0.099s 0m0.066s)
+ 7. btp_parse_char_limited (utils.at:173): ok     (0m0.114s 0m0.051s)
+ 8. btp_skip_char_sequence (utils.at:210): ok     (0m0.097s 0m0.060s)
+ 9. btp_skip_char_span (utils.at:228): ok     (0m0.100s 0m0.046s)
+ 10. btp_skip_char_span_location (utils.at:250): ok     (0m0.090s 0m0.048s)
+ 11. btp_parse_char_span (utils.at:284): ok     (0m0.106s 0m0.053s)
+ 12. btp_parse_char_cspan (utils.at:308): ok     (0m0.108s 0m0.061s)
+ 13. btp_skip_string (utils.at:332): ok     (0m0.086s 0m0.055s)
+ 14. btp_parse_string (utils.at:352): ok     (0m0.108s 0m0.041s)
+ 15. btp_skip_unsigned_integer (utils.at:372): ok     (0m0.090s 0m0.039s)
+ 16. btp_parse_unsigned_integer (utils.at:389): ok     (0m0.105s 0m0.054s)
+ 17. btp_skip_hexadecimal_number (utils.at:408): ok     (0m0.098s 0m0.055s)
+ 18. btp_parse_hexadecimal_number (utils.at:425): ok     (0m0.111s 0m0.055s)
+ 19. btp_strbuf_append_char (strbuf.at:9): ok     (0m0.096s 0m0.050s)
+ 20. btp_strbuf_append_str (strbuf.at:37): ok     (0m0.091s 0m0.063s)
+ 21. btp_frame_dup (frame.at:9): ok     (0m0.085s 0m0.044s)
+ 22. btp_frame_parse_frame_start (frame.at:64): ok     (0m0.101s 0m0.061s)
+ 23. btp_frame_parseadd_operator (frame.at:112): ok     (0m0.113s 0m0.051s)
+ 24. btp_frame_parse_function_name (frame.at:156): ok     (0m0.089s 0m0.049s)
+ 25. btp_frame_skip_function_args (frame.at:218): ok     (0m0.106s 0m0.055s)
+ 26. btp_frame_parse_function_call (frame.at:262): ok     (0m0.101s 0m0.053s)
+ 27. btp_frame_parse_address_in_function (frame.at:367): ok     (0m0.098s 0m0.042s)
+ 28. btp_frame_parse_file_location (frame.at:423): ok     (0m0.107s 0m0.054s)
+ 29. btp_frame_parse_header (frame.at:485): ok     (0m0.109s 0m0.048s)
+ 30. btp_frame_parse (frame.at:576): ok     (0m0.111s 0m0.043s)
+ 31. btp_thread_remove_frame (thread.at:8): ok     (0m0.109s 0m0.062s)
+ 32. btp_thread_remove_frames_above (thread.at:72): ok     (0m0.092s 0m0.038s)
+ 33. btp_thread_remove_frames_below_n (thread.at:137): ok     (0m0.111s 0m0.058s)
+ 34. btp_thread_parse (thread.at:204): ok     (0m0.106s 0m0.051s)
+ 35. btp_thread_parse-locations (thread.at:302): ok     (0m0.095s 0m0.047s)
+ 36. btp_thread_skip_lwp (thread.at:371): ok     (0m0.096s 0m0.063s)
+ 37. btp_backtrace_remove_threads_except_one (backtrace.at:8): ok     (0m0.112s 0m0.052s)
+ 38. btp_backtrace_find_crash_thread (backtrace.at:61): ok     (0m0.110s 0m0.051s)
+ 39. btp_backtrace_limit_frame_depth (backtrace.at:93): ok     (0m0.095s 0m0.044s)
+ 40. btp_backtrace_quality_complex (backtrace.at:130): ok     (0m0.080s 0m0.025s)
+ 41. btp_normalize_thread_removes_zeroes (normalize.at:44): ok     (0m0.114s 0m0.042s)
+ 42. btp_normalize_paired_unknown_function_names (normalize.at:88): ok     (0m0.113s 0m0.056s)
+ 43. metrics_all_one_thread_empty (metrics.at:43): ok     (0m0.091s 0m0.046s)
+ 44. metrics_all_both_threads_empty (metrics.at:62): ok     (0m0.076s 0m0.026s)
+ 45. metrics_all_both_starting_??_levendistance3_a (metrics.at:81): ok     (0m0.086s 0m0.047s)
+ 46. metrics_all_both_starting_??_levendistance3_b (metrics.at:100): ok     (0m0.105s 0m0.050s)
+ 47. metrics_levenshtein_random_??_levendistance0_a (metrics.at:119): ok     (0m0.112s 0m0.058s)
+ 48. metrics_levenshtein_random_??_levendistance0_b (metrics.at:136): ok     (0m0.121s 0m0.054s)
+ 49. metrics_levenshtein_random_??_distance1 (metrics.at:153): ok     (0m0.082s 0m0.046s)
+ 50. metrics_levenshtein_random_??_distance2_a (metrics.at:170): ok     (0m0.116s 0m0.043s)
+ 51. metrics_levenshtein_random_??_distance2_b (metrics.at:187): ok     (0m0.107s 0m0.062s)
+ 52. metrics_levenshtein_random_??_distance2_c (metrics.at:204): ok     (0m0.109s 0m0.058s)
+ 53. metrics_levenshtein_trans_??_distance2_a (metrics.at:221): ok     (0m0.121s 0m0.048s)
+ 54. metrics_levenshtein_trans_??_distance2_b (metrics.at:238): ok     (0m0.113s 0m0.042s)
+ 55. metrics_levenshtein_swap_trans_distance2_a (metrics.at:255): ok     (0m0.088s 0m0.039s)
+ 56. metrics_levenshtein_swap_notrans_distance3_a (metrics.at:269): ok     (0m0.109s 0m0.044s)
+ 57. metrics_jaccard_random_??_distance0_a (metrics.at:283): ok     (0m0.103s 0m0.063s)
+ 58. metrics_jaccard_random_??_distance23_a (metrics.at:300): ok     (0m0.105s 0m0.063s)
+ 59. metrics_jaccard_random_??_distance35 (metrics.at:315): ok     (0m0.120s 0m0.058s)
+ 60. distances_basic_properties (metrics.at:330): ok     (0m0.090s 0m0.028s)
+ 61. distances_threads_compare (metrics.at:360): ok     (0m0.088s 0m0.049s)
+ 63. btp_dendrogram_cut (cluster.at:71): ok     (0m0.096s 0m0.058s)
+ 64. btp_sharedlib_parse (sharedlib.at:8): ok     (0m0.090s 0m0.044s)
+ 65. btp_sharedlib_count (sharedlib.at:33): ok     (0m0.084s 0m0.036s)
+ 66. btp_sharedlib_append (sharedlib.at:55): ok     (0m0.110s 0m0.056s)
+ 67. btp_sharedlib_find_address (sharedlib.at:80): ok     (0m0.096s 0m0.044s)
+ testsuite: ending at: Tue Apr 17 15:47:52 CEST 2012
+ testsuite: test suite duration: 0h 0m 13s
+ 
+ ## ------------- ##
+ ## Test results. ##
+ ## ------------- ##
+ 
+ ERROR: All 67 tests were run,
+ 1 failed unexpectedly.
+ 
+ ## ------------------------ ##
+ ## Summary of the failures. ##
+ ## ------------------------ ##
+ Failed tests:
+ btparser 0.18 test suite test groups:
+ 
+  NUM: FILE-NAME:LINE     TEST-GROUP-NAME
+       KEYWORDS
+ 
+   62: cluster.at:3       btp_distances_cluster_objects
+ 
+ ## ---------------------- ##
+ ## Detailed failed tests. ##
+ ## ---------------------- ##
+ 
+ #                             -*- compilation -*-
+ 62. cluster.at:3: testing ...
+ ./cluster.at:3: $LIBTOOL --mode=link $CC $CFLAGS $LDFLAGS -o btp_distances_cluster_objects btp_distances_cluster_objects.c $LIBS
+ stderr:
+ stdout:
+ libtool: link: gcc -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -I/home/rmarko/btparser -D_GNU_SOURCE -o .libs/btp_distances_cluster_objects btp_distances_cluster_objects.c  /home/rmarko/btparser/lib/.libs/libbtparser.so
+ ./cluster.at:3: ./btp_distances_cluster_objects
+ stderr:
+ lt-btp_distances_cluster_objects: btp_distances_cluster_objects.c:29: main: Assertion `dendrogram->size == 40' failed.
+ /home/rmarko/btparser/tests/testsuite.dir/at-groups/62/test-source: line 121:  2987 Aborted                 (core dumped) ./btp_distances_cluster_objects
+ stdout:
+ ./cluster.at:3: exit code was 134, expected 0
+ 62. cluster.at:3: 62. btp_distances_cluster_objects (cluster.at:3): FAILED (cluster.at:3)
+ 
+ 
+ ## ------------- ##
+ ## ../config.log ##
+ ## ------------- ##
+ | This file contains any messages produced by compilers while
+ | running configure, to aid debugging if configure makes a mistake.
+ | 
+ | It was created by btparser configure 0.18, which was
+ | generated by GNU Autoconf 2.63.  Invocation command line was
+ | 
+ |   $ ./configure --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=x86_64-redhat-linux-gnu --program-prefix= --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info
+ | 
+ | ## --------- ##
+ | ## Platform. ##
+ | ## --------- ##
+ | 
+ | hostname = dhcp-25-177.brq.redhat.com
+ | uname -m = x86_64
+ | uname -r = 2.6.32-251.el6.x86_64
+ | uname -s = Linux
+ | uname -v = #1 SMP Fri Mar 9 12:48:43 EST 2012
+ | 
+ | /usr/bin/uname -p = unknown
+ | /bin/uname -X     = unknown
+ | 
+ | /bin/arch              = x86_64
+ | /usr/bin/arch -k       = unknown
+ | /usr/convex/getsysinfo = unknown
+ | /usr/bin/hostinfo      = unknown
+ | /bin/machine           = unknown
+ | /usr/bin/oslevel       = unknown
+ | /bin/universe          = unknown
+ | 
+ | PATH: /usr/lib64/qt-3.3/bin
+ | PATH: /usr/local/bin
+ | PATH: /usr/bin
+ | PATH: /bin
+ | PATH: /usr/games
+ | PATH: /usr/local/sbin
+ | PATH: /usr/sbin
+ | PATH: /sbin
+ | PATH: /home/rmarko/bin
+ | 
+ | 
+ | ## ----------- ##
+ | ## Core tests. ##
+ | ## ----------- ##
+ | 
+ | configure:2094: checking for a BSD-compatible install
+ | configure:2162: result: /usr/bin/install -c
+ | configure:2173: checking whether build environment is sane
+ | configure:2233: result: yes
+ | configure:2374: checking for a thread-safe mkdir -p
+ | configure:2413: result: /bin/mkdir -p
+ | configure:2426: checking for gawk
+ | configure:2442: found /usr/bin/gawk
+ | configure:2453: result: gawk
+ | configure:2464: checking whether make sets $(MAKE)
+ | configure:2486: result: yes
+ | configure:2569: checking whether to enable maintainer-specific portions of Makefiles
+ | configure:2578: result: no
+ | configure:2601: checking for x86_64-unknown-linux-gnu-gcc
+ | configure:2631: result: no
+ | configure:2641: checking for gcc
+ | configure:2657: found /usr/bin/gcc
+ | configure:2668: result: gcc
+ | configure:2900: checking for C compiler version
+ | configure:2908: gcc --version >&5
+ | gcc (GCC) 4.4.6 20120305 (Red Hat 4.4.6-4)
+ | Copyright (C) 2010 Free Software Foundation, Inc.
+ | This is free software; see the source for copying conditions.  There is NO
+ | warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ | 
+ | configure:2912: $? = 0
+ | configure:2919: gcc -v >&5
+ | Using built-in specs.
+ | Target: x86_64-redhat-linux
+ | Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-languages=c,c++,objc,obj-c++,java,fortran,ada --enable-java-awt=gtk --disable-dssi --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-1.5.0.0/jre --enable-libgcj-multifile --enable-java-maintainer-mode --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --disable-libjava-multilib --with-ppl --with-cloog --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+ | Thread model: posix
+ | gcc version 4.4.6 20120305 (Red Hat 4.4.6-4) (GCC) 
+ | configure:2923: $? = 0
+ | configure:2930: gcc -V >&5
+ | gcc: '-V' option must have argument
+ | configure:2934: $? = 1
+ | configure:2957: checking for C compiler default output file name
+ | configure:2979: gcc -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic   conftest.c  >&5
+ | configure:2983: $? = 0
+ | configure:3021: result: a.out
+ | configure:3040: checking whether the C compiler works
+ | configure:3050: ./a.out
+ | configure:3054: $? = 0
+ | configure:3073: result: yes
+ | configure:3080: checking whether we are cross compiling
+ | configure:3082: result: no
+ | configure:3085: checking for suffix of executables
+ | configure:3092: gcc -o conftest -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic   conftest.c  >&5
+ | configure:3096: $? = 0
+ | configure:3122: result: 
+ | configure:3128: checking for suffix of object files
+ | configure:3154: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:3158: $? = 0
+ | configure:3183: result: o
+ | configure:3187: checking whether we are using the GNU C compiler
+ | configure:3216: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:3223: $? = 0
+ | configure:3240: result: yes
+ | configure:3249: checking whether gcc accepts -g
+ | configure:3279: gcc -c -g  conftest.c >&5
+ | configure:3286: $? = 0
+ | configure:3387: result: yes
+ | configure:3404: checking for gcc option to accept ISO C89
+ | configure:3478: gcc  -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:3485: $? = 0
+ | configure:3508: result: none needed
+ | configure:3537: checking for style of include used by make
+ | configure:3565: result: GNU
+ | configure:3590: checking dependency style of gcc
+ | configure:3700: result: gcc3
+ | configure:3777: checking build system type
+ | configure:3795: result: x86_64-unknown-linux-gnu
+ | configure:3817: checking host system type
+ | configure:3832: result: x86_64-unknown-linux-gnu
+ | configure:3854: checking for a sed that does not truncate output
+ | configure:3920: result: /bin/sed
+ | configure:3938: checking for grep that handles long lines and -e
+ | configure:3998: result: /bin/grep
+ | configure:4003: checking for egrep
+ | configure:4067: result: /bin/grep -E
+ | configure:4072: checking for fgrep
+ | configure:4136: result: /bin/grep -F
+ | configure:4171: checking for ld used by gcc
+ | configure:4238: result: /usr/bin/ld
+ | configure:4247: checking if the linker (/usr/bin/ld) is GNU ld
+ | configure:4262: result: yes
+ | configure:4274: checking for BSD- or MS-compatible name lister (nm)
+ | configure:4323: result: /usr/bin/nm -B
+ | configure:4441: checking the name lister (/usr/bin/nm -B) interface
+ | configure:4448: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:4451: /usr/bin/nm -B "conftest.o"
+ | configure:4454: output
+ | 0000000000000000 B some_variable
+ | configure:4461: result: BSD nm
+ | configure:4464: checking whether ln -s works
+ | configure:4468: result: yes
+ | configure:4476: checking the maximum length of command line arguments
+ | configure:4596: result: 1966080
+ | configure:4613: checking whether the shell understands some XSI constructs
+ | configure:4623: result: yes
+ | configure:4627: checking whether the shell understands "+="
+ | configure:4633: result: yes
+ | configure:4668: checking for /usr/bin/ld option to reload object files
+ | configure:4675: result: -r
+ | configure:4704: checking for x86_64-unknown-linux-gnu-objdump
+ | configure:4734: result: no
+ | configure:4744: checking for objdump
+ | configure:4760: found /usr/bin/objdump
+ | configure:4771: result: objdump
+ | configure:4803: checking how to recognize dependent libraries
+ | configure:4999: result: pass_all
+ | configure:5019: checking for x86_64-unknown-linux-gnu-ar
+ | configure:5049: result: no
+ | configure:5059: checking for ar
+ | configure:5075: found /usr/bin/ar
+ | configure:5086: result: ar
+ | configure:5124: checking for x86_64-unknown-linux-gnu-strip
+ | configure:5154: result: no
+ | configure:5164: checking for strip
+ | configure:5180: found /usr/bin/strip
+ | configure:5191: result: strip
+ | configure:5223: checking for x86_64-unknown-linux-gnu-ranlib
+ | configure:5253: result: no
+ | configure:5263: checking for ranlib
+ | configure:5279: found /usr/bin/ranlib
+ | configure:5290: result: ranlib
+ | configure:5380: checking command to parse /usr/bin/nm -B output from gcc object
+ | configure:5498: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:5501: $? = 0
+ | configure:5505: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' \> conftest.nm
+ | configure:5508: $? = 0
+ | configure:5562: gcc -o conftest -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic   conftest.c conftstm.o >&5
+ | configure:5565: $? = 0
+ | configure:5603: result: ok
+ | configure:5699: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:5702: $? = 0
+ | configure:6470: checking how to run the C preprocessor
+ | configure:6510: gcc -E  conftest.c
+ | configure:6517: $? = 0
+ | configure:6548: gcc -E  conftest.c
+ | conftest.c:10:28: error: ac_nonexistent.h: No such file or directory
+ | configure:6555: $? = 1
+ | configure: failed program was:
+ | | /* confdefs.h.  */
+ | | #define PACKAGE_NAME "btparser"
+ | | #define PACKAGE_TARNAME "btparser"
+ | | #define PACKAGE_VERSION "0.18"
+ | | #define PACKAGE_STRING "btparser 0.18"
+ | | #define PACKAGE_BUGREPORT "kklic@redhat.com"
+ | | #define PACKAGE "btparser"
+ | | #define VERSION "0.18"
+ | | /* end confdefs.h.  */
+ | | #include <ac_nonexistent.h>
+ | configure:6588: result: gcc -E
+ | configure:6617: gcc -E  conftest.c
+ | configure:6624: $? = 0
+ | configure:6655: gcc -E  conftest.c
+ | conftest.c:10:28: error: ac_nonexistent.h: No such file or directory
+ | configure:6662: $? = 1
+ | configure: failed program was:
+ | | /* confdefs.h.  */
+ | | #define PACKAGE_NAME "btparser"
+ | | #define PACKAGE_TARNAME "btparser"
+ | | #define PACKAGE_VERSION "0.18"
+ | | #define PACKAGE_STRING "btparser 0.18"
+ | | #define PACKAGE_BUGREPORT "kklic@redhat.com"
+ | | #define PACKAGE "btparser"
+ | | #define VERSION "0.18"
+ | | /* end confdefs.h.  */
+ | | #include <ac_nonexistent.h>
+ | configure:6702: checking for ANSI C header files
+ | configure:6732: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6739: $? = 0
+ | configure:6838: gcc -o conftest -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic   conftest.c  >&5
+ | configure:6842: $? = 0
+ | configure:6848: ./conftest
+ | configure:6852: $? = 0
+ | configure:6870: result: yes
+ | configure:6894: checking for sys/types.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for sys/stat.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for stdlib.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for string.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for memory.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for strings.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for inttypes.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for stdint.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6894: checking for unistd.h
+ | configure:6915: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6922: $? = 0
+ | configure:6939: result: yes
+ | configure:6957: checking for dlfcn.h
+ | configure:6978: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:6985: $? = 0
+ | configure:7002: result: yes
+ | configure:7158: checking for objdir
+ | configure:7173: result: .libs
+ | configure:7469: checking if gcc supports -fno-rtti -fno-exceptions
+ | configure:7487: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -fno-rtti -fno-exceptions conftest.c >&5
+ | cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+ | configure:7491: $? = 0
+ | configure:7504: result: no
+ | configure:7524: checking for gcc option to produce PIC
+ | configure:7796: result: -fPIC -DPIC
+ | configure:7808: checking if gcc PIC flag -fPIC -DPIC works
+ | configure:7826: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -fPIC -DPIC -DPIC conftest.c >&5
+ | configure:7830: $? = 0
+ | configure:7843: result: yes
+ | configure:7867: checking if gcc static flag -static works
+ | configure:7895: result: no
+ | configure:7910: checking if gcc supports -c -o file.o
+ | configure:7931: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  -o out/conftest2.o conftest.c >&5
+ | configure:7935: $? = 0
+ | configure:7957: result: yes
+ | configure:7965: checking if gcc supports -c -o file.o
+ | configure:8012: result: yes
+ | configure:8045: checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries
+ | configure:9119: result: yes
+ | configure:9156: checking whether -lc should be explicitly linked in
+ | configure:9161: gcc -c -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic  conftest.c >&5
+ | configure:9164: $? = 0
+ | configure:9179: gcc -shared conftest.o  -v -Wl,-soname -Wl,conftest -o conftest 2\>\&1 \| /bin/grep  -lc  \>/dev/null 2\>\&1
+ | configure:9182: $? = 0
+ | configure:9194: result: no
+ | configure:9358: checking dynamic linker characteristics
+ | configure:9801: gcc -o conftest -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic   -Wl,-rpath -Wl,/foo conftest.c  >&5
+ | configure:9808: $? = 0
+ | configure:10044: result: GNU/Linux ld.so
+ | configure:10146: checking how to hardcode library paths into programs
+ | configure:10171: result: immediate
+ | configure:11004: checking whether stripping libraries is possible
+ | configure:11009: result: yes
+ | configure:11044: checking if libtool supports shared libraries
+ | configure:11046: result: yes
+ | configure:11049: checking whether to build shared libraries
+ | configure:11070: result: yes
+ | configure:11073: checking whether to build static libraries
+ | configure:11077: result: no
+ | configure:11136: checking for python
+ | configure:11154: found /usr/bin/python
+ | configure:11166: result: /usr/bin/python
+ | configure:11189: checking for python version
+ | configure:11196: result: 2.6
+ | configure:11208: checking for python platform
+ | configure:11215: result: linux2
+ | configure:11222: checking for python script directory
+ | configure:11251: result: ${prefix}/lib/python2.6/site-packages
+ | configure:11260: checking for python extension module directory
+ | configure:11289: result: ${exec_prefix}/lib64/python2.6/site-packages
+ | configure:11316: checking for x86_64-unknown-linux-gnu-pkg-config
+ | configure:11349: result: no
+ | configure:11359: checking for pkg-config
+ | configure:11377: found /usr/bin/pkg-config
+ | configure:11389: result: /usr/bin/pkg-config
+ | configure:11414: checking pkg-config is at least version 0.9.0
+ | configure:11417: result: yes
+ | configure:11428: checking for PYTHON
+ | configure:11435: $PKG_CONFIG --exists --print-errors "python"
+ | Package python was not found in the pkg-config search path.
+ | Perhaps you should add the directory containing `python.pc'
+ | to the PKG_CONFIG_PATH environment variable
+ | No package 'python' found
+ | configure:11438: $? = 1
+ | configure:11451: $PKG_CONFIG --exists --print-errors "python"
+ | Package python was not found in the pkg-config search path.
+ | Perhaps you should add the directory containing `python.pc'
+ | to the PKG_CONFIG_PATH environment variable
+ | No package 'python' found
+ | configure:11454: $? = 1
+ | No package 'python' found
+ | configure:11481: result: no
+ | configure:11670: creating ./config.status
+ | 
+ | ## ---------------------- ##
+ | ## Running config.status. ##
+ | ## ---------------------- ##
+ | 
+ | This file was extended by btparser config.status 0.18, which was
+ | generated by GNU Autoconf 2.63.  Invocation command line was
+ | 
+ |   CONFIG_FILES    = 
+ |   CONFIG_HEADERS  = 
+ |   CONFIG_LINKS    = 
+ |   CONFIG_COMMANDS = 
+ |   $ ./config.status 
+ | 
+ | on dhcp-25-177.brq.redhat.com
+ | 
+ | config.status:927: creating tests/Makefile
+ | config.status:927: creating tests/atlocal
+ | config.status:927: creating btparser.spec
+ | config.status:927: creating btparser.pc
+ | config.status:927: creating Makefile
+ | config.status:927: creating lib/Makefile
+ | config.status:927: creating python/Makefile
+ | config.status:1138: executing depfiles commands
+ | config.status:1138: executing libtool commands
+ | config.status:1138: executing tests/atconfig commands
+ | 
+ | ## ---------------- ##
+ | ## Cache variables. ##
+ | ## ---------------- ##
+ | 
+ | ac_cv_build=x86_64-unknown-linux-gnu
+ | ac_cv_c_compiler_gnu=yes
+ | ac_cv_env_CC_set=
+ | ac_cv_env_CC_value=
+ | ac_cv_env_CFLAGS_set=set
+ | ac_cv_env_CFLAGS_value='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic'
+ | ac_cv_env_CPPFLAGS_set=
+ | ac_cv_env_CPPFLAGS_value=
+ | ac_cv_env_CPP_set=
+ | ac_cv_env_CPP_value=
+ | ac_cv_env_LDFLAGS_set=
+ | ac_cv_env_LDFLAGS_value=
+ | ac_cv_env_LIBS_set=
+ | ac_cv_env_LIBS_value=
+ | ac_cv_env_PKG_CONFIG_set=
+ | ac_cv_env_PKG_CONFIG_value=
+ | ac_cv_env_PYTHON_CFLAGS_set=
+ | ac_cv_env_PYTHON_CFLAGS_value=
+ | ac_cv_env_PYTHON_LIBS_set=
+ | ac_cv_env_PYTHON_LIBS_value=
+ | ac_cv_env_build_alias_set=set
+ | ac_cv_env_build_alias_value=x86_64-unknown-linux-gnu
+ | ac_cv_env_host_alias_set=set
+ | ac_cv_env_host_alias_value=x86_64-unknown-linux-gnu
+ | ac_cv_env_target_alias_set=set
+ | ac_cv_env_target_alias_value=x86_64-redhat-linux-gnu
+ | ac_cv_header_dlfcn_h=yes
+ | ac_cv_header_inttypes_h=yes
+ | ac_cv_header_memory_h=yes
+ | ac_cv_header_stdc=yes
+ | ac_cv_header_stdint_h=yes
+ | ac_cv_header_stdlib_h=yes
+ | ac_cv_header_string_h=yes
+ | ac_cv_header_strings_h=yes
+ | ac_cv_header_sys_stat_h=yes
+ | ac_cv_header_sys_types_h=yes
+ | ac_cv_header_unistd_h=yes
+ | ac_cv_host=x86_64-unknown-linux-gnu
+ | ac_cv_objext=o
+ | ac_cv_path_EGREP='/bin/grep -E'
+ | ac_cv_path_FGREP='/bin/grep -F'
+ | ac_cv_path_GREP=/bin/grep
+ | ac_cv_path_PYTHON=/usr/bin/python
+ | ac_cv_path_SED=/bin/sed
+ | ac_cv_path_ac_pt_PKG_CONFIG=/usr/bin/pkg-config
+ | ac_cv_path_install='/usr/bin/install -c'
+ | ac_cv_path_mkdir=/bin/mkdir
+ | ac_cv_prog_AWK=gawk
+ | ac_cv_prog_CPP='gcc -E'
+ | ac_cv_prog_ac_ct_AR=ar
+ | ac_cv_prog_ac_ct_CC=gcc
+ | ac_cv_prog_ac_ct_OBJDUMP=objdump
+ | ac_cv_prog_ac_ct_RANLIB=ranlib
+ | ac_cv_prog_ac_ct_STRIP=strip
+ | ac_cv_prog_cc_c89=
+ | ac_cv_prog_cc_g=yes
+ | ac_cv_prog_make_make_set=yes
+ | am_cv_CC_dependencies_compiler_type=gcc3
+ | am_cv_python_platform=linux2
+ | am_cv_python_pyexecdir='${exec_prefix}/lib64/python2.6/site-packages'
+ | am_cv_python_pythondir='${prefix}/lib/python2.6/site-packages'
+ | am_cv_python_version=2.6
+ | lt_cv_deplibs_check_method=pass_all
+ | lt_cv_file_magic_cmd='$MAGIC_CMD'
+ | lt_cv_file_magic_test_file=
+ | lt_cv_ld_reload_flag=-r
+ | lt_cv_nm_interface='BSD nm'
+ | lt_cv_objdir=.libs
+ | lt_cv_path_LD=/usr/bin/ld
+ | lt_cv_path_NM='/usr/bin/nm -B'
+ | lt_cv_prog_compiler_c_o=yes
+ | lt_cv_prog_compiler_pic_works=yes
+ | lt_cv_prog_compiler_rtti_exceptions=no
+ | lt_cv_prog_compiler_static_works=no
+ | lt_cv_prog_gnu_ld=yes
+ | lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'''
+ | lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \([^ ]*\) $/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"\2", (void *) \&\2},/p'\'''
+ | lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \([^ ]*\) $/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \(lib[^ ]*\)$/  {"\2", (void *) \&\2},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"lib\2", (void *) \&\2},/p'\'''
+ | lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+ | lt_cv_sys_max_cmd_len=1966080
+ | 
+ | ## ----------------- ##
+ | ## Output variables. ##
+ | ## ----------------- ##
+ | 
+ | ACLOCAL='${SHELL} /home/rmarko/btparser/missing --run aclocal-1.11'
+ | AMDEPBACKSLASH='\'
+ | AMDEP_FALSE='#'
+ | AMDEP_TRUE=''
+ | AMTAR='${SHELL} /home/rmarko/btparser/missing --run tar'
+ | AR='ar'
+ | AUTOCONF='${SHELL} /home/rmarko/btparser/missing --run autoconf'
+ | AUTOHEADER='${SHELL} /home/rmarko/btparser/missing --run autoheader'
+ | AUTOM4TE='${SHELL} /home/rmarko/btparser/missing --run autom4te'
+ | AUTOMAKE='${SHELL} /home/rmarko/btparser/missing --run automake-1.11'
+ | AWK='gawk'
+ | CC='gcc'
+ | CCDEPMODE='depmode=gcc3'
+ | CFLAGS='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic'
+ | CPP='gcc -E'
+ | CPPFLAGS=''
+ | CYGPATH_W='echo'
+ | DEFS='-DPACKAGE_NAME=\"btparser\" -DPACKAGE_TARNAME=\"btparser\" -DPACKAGE_VERSION=\"0.18\" -DPACKAGE_STRING=\"btparser\ 0.18\" -DPACKAGE_BUGREPORT=\"kklic@redhat.com\" -DPACKAGE=\"btparser\" -DVERSION=\"0.18\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\"'
+ | DEPDIR='.deps'
+ | DSYMUTIL=''
+ | DUMPBIN=''
+ | ECHO_C=''
+ | ECHO_N='-n'
+ | ECHO_T=''
+ | EGREP='/bin/grep -E'
+ | EXEEXT=''
+ | FGREP='/bin/grep -F'
+ | GREP='/bin/grep'
+ | INSTALL_DATA='${INSTALL} -m 644'
+ | INSTALL_PROGRAM='${INSTALL}'
+ | INSTALL_SCRIPT='${INSTALL}'
+ | INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+ | LD='/usr/bin/ld -m elf_x86_64'
+ | LDFLAGS=''
+ | LIBOBJS=''
+ | LIBS=''
+ | LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ | LIPO=''
+ | LN_S='ln -s'
+ | LTLIBOBJS=''
+ | MAINT='#'
+ | MAINTAINER_MODE_FALSE=''
+ | MAINTAINER_MODE_TRUE='#'
+ | MAKEINFO='${SHELL} /home/rmarko/btparser/missing --run makeinfo'
+ | MKDIR_P='/bin/mkdir -p'
+ | NM='/usr/bin/nm -B'
+ | NMEDIT=''
+ | O0CFLAGS='-g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic'
+ | OBJDUMP='objdump'
+ | OBJEXT='o'
+ | OTOOL64=''
+ | OTOOL=''
+ | PACKAGE='btparser'
+ | PACKAGE_BUGREPORT='kklic@redhat.com'
+ | PACKAGE_NAME='btparser'
+ | PACKAGE_STRING='btparser 0.18'
+ | PACKAGE_TARNAME='btparser'
+ | PACKAGE_VERSION='0.18'
+ | PATH_SEPARATOR=':'
+ | PKG_CONFIG='/usr/bin/pkg-config'
+ | PYTHON='/usr/bin/python'
+ | PYTHON_CFLAGS='-I/usr/include/python2.6'
+ | PYTHON_EXEC_PREFIX='${exec_prefix}'
+ | PYTHON_LIBS='-L/usr/lib64 -lpython2.6'
+ | PYTHON_PLATFORM='linux2'
+ | PYTHON_PREFIX='${prefix}'
+ | PYTHON_VERSION='2.6'
+ | RANLIB='ranlib'
+ | SED='/bin/sed'
+ | SET_MAKE=''
+ | SHELL='/bin/sh'
+ | STRIP='strip'
+ | VERSION='0.18'
+ | ac_ct_CC='gcc'
+ | ac_ct_DUMPBIN=''
+ | am__EXEEXT_FALSE=''
+ | am__EXEEXT_TRUE='#'
+ | am__fastdepCC_FALSE='#'
+ | am__fastdepCC_TRUE=''
+ | am__include='include'
+ | am__isrc=''
+ | am__leading_dot='.'
+ | am__quote=''
+ | am__tar='${AMTAR} chof - "$$tardir"'
+ | am__untar='${AMTAR} xf -'
+ | bindir='/usr/bin'
+ | build='x86_64-unknown-linux-gnu'
+ | build_alias='x86_64-unknown-linux-gnu'
+ | build_cpu='x86_64'
+ | build_os='linux-gnu'
+ | build_vendor='unknown'
+ | datadir='/usr/share'
+ | datarootdir='${prefix}/share'
+ | docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+ | dvidir='${docdir}'
+ | exec_prefix='/usr'
+ | host='x86_64-unknown-linux-gnu'
+ | host_alias='x86_64-unknown-linux-gnu'
+ | host_cpu='x86_64'
+ | host_os='linux-gnu'
+ | host_vendor='unknown'
+ | htmldir='${docdir}'
+ | includedir='/usr/include'
+ | infodir='/usr/share/info'
+ | install_sh='${SHELL} /home/rmarko/btparser/install-sh'
+ | libdir='/usr/lib64'
+ | libexecdir='/usr/libexec'
+ | localedir='${datarootdir}/locale'
+ | localstatedir='/var'
+ | lt_ECHO='echo'
+ | mandir='/usr/share/man'
+ | mkdir_p='/bin/mkdir -p'
+ | oldincludedir='/usr/include'
+ | pdfdir='${docdir}'
+ | pkgpyexecdir='${pyexecdir}/btparser'
+ | pkgpythondir='${pythondir}/btparser'
+ | prefix='/usr'
+ | program_transform_name='s&^&&'
+ | psdir='${docdir}'
+ | pyexecdir='${exec_prefix}/lib64/python2.6/site-packages'
+ | pythondir='${prefix}/lib/python2.6/site-packages'
+ | sbindir='/usr/sbin'
+ | sharedstatedir='/var/lib'
+ | sysconfdir='/etc'
+ | target_alias='x86_64-redhat-linux-gnu'
+ | 
+ | ## ----------- ##
+ | ## confdefs.h. ##
+ | ## ----------- ##
+ | 
+ | #define PACKAGE_NAME "btparser"
+ | #define PACKAGE_TARNAME "btparser"
+ | #define PACKAGE_VERSION "0.18"
+ | #define PACKAGE_STRING "btparser 0.18"
+ | #define PACKAGE_BUGREPORT "kklic@redhat.com"
+ | #define PACKAGE "btparser"
+ | #define VERSION "0.18"
+ | #define STDC_HEADERS 1
+ | #define HAVE_SYS_TYPES_H 1
+ | #define HAVE_SYS_STAT_H 1
+ | #define HAVE_STDLIB_H 1
+ | #define HAVE_STRING_H 1
+ | #define HAVE_MEMORY_H 1
+ | #define HAVE_STRINGS_H 1
+ | #define HAVE_INTTYPES_H 1
+ | #define HAVE_STDINT_H 1
+ | #define HAVE_UNISTD_H 1
+ | #define HAVE_DLFCN_H 1
+ | #define LT_OBJDIR ".libs/"
+ | 
+ | configure: exit 0
+ 
+]]></system-out>
+  <system-err/>
+</testsuite>

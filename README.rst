@@ -1,7 +1,9 @@
 autotest2junit
 --------------
 
-Creates junit xml files from
+Autoconf Autotest `testsuite.log` to JUnit `testsuite.xml` converter.
+
+Creates `JUnit <http://junit.org/>`_ xml files from
 `Autoconf Autotest <http://www.gnu.org/software/autoconf/manual/autoconf.html#Using-Autotest>`_
 framework output files to be used in Jenkins CI.
 

@@ -1,0 +1,88 @@
+#!/usr/bin/env python
+
+import re
+from lxml import etree
+
+OK_LINES = r'(?P<num>\d+)\.\s(?P<name>[^\s]+)\s\((?P<file>[^:]+):(?P<line>\d+)\).*\((?P<time>[^\s]+)\s(?P<time2>[^\)]+)\)$'
+ER_LINES = r'\s\s(?P<num>\d+):\s(?P<file>[^:]+):(?P<line>\d+)\s+(?P<name>[^\s]+)$'
+
+def time_to_seconds(inp):
+    hours = 0
+    minutes = 0
+    seconds = 0
+    if 'h' in inp:
+        hours = int(re.search(r'(\d+)h', inp).group(1))
+    if 'm' in inp:
+        minutes = int(re.search(r'(\d+)m', inp).group(1))
+    if 's' in inp:
+        seconds = float(re.search(r'(\d*\.?\d*)s', inp).group(1))
+
+    return '%.3f' % (seconds + minutes * 60 + hours * 3600)
+
+
+def parse(fname):
+    totaltime=0
+    list_ok=False
+    list_er=False
+    passed=[]
+    failed=[]
+
+    ok = re.compile(OK_LINES)
+    er = re.compile(ER_LINES)
+
+    with open(fname) as f:
+        complete = f.readlines()
+        for line in complete:
+            if 'testsuite: starting' in line:
+                list_ok=True
+                continue
+            if '## Summary of the failures. ##' in line:
+                list_er=True
+                continue
+            if '## Detailed failed' in line:
+                list_er=False
+                continue
+            if 'test suite duration' in line:
+                totaltime=line.split(':')[2].strip()
+
+            if list_ok:
+                match = ok.search(line)
+                if not match:
+                    list_ok=False
+                    continue
+                passed.append(match.groupdict())
+
+            if list_er:
+                match = er.search(line)
+                if not match:
+                    continue
+                failed.append(match.groupdict())
+
+    tests=len(passed) + len(failed)
+    fails=len(failed)
+
+    testsuite = etree.Element('testsuite', name='testsuite', errors='0',
+        failures=str(fails), tests=str(tests), time=time_to_seconds(totaltime))
+
+    for i in failed:
+        f = etree.SubElement(testsuite, 'testcase',
+            name=i['name'],
+            classname='%s.%s' % (i['file'].replace('.at', ''), i['name']))
+        etree.SubElement(f, 'failure', type='fail', message='Test failed')
+
+    for i in passed:
+        etree.SubElement(testsuite, 'testcase',
+            name=i['name'], 
+            classname='%s.%s' % (i['file'].replace('.at', ''), i['name']),
+            time=time_to_seconds(i['time']))
+
+    out = etree.SubElement(testsuite, 'system-out')
+    out.text = etree.CDATA(unicode(' '.join(complete), errors='ignore'))
+    err = etree.SubElement(testsuite, 'system-err')
+
+    with open('testsuite.xml', 'w') as outfile:
+        outfile.write(etree.tostring(testsuite, xml_declaration=True,
+            pretty_print=True, encoding='UTF-8'))
+
+if __name__ == "__main__":
+    parse('testsuite.log')
